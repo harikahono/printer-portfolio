@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PrimaCetak — Solusi Cetak & Merchandise</title>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Inter:opsz,wght@14..32,100..900&display=swap");
+body{font-family:"Inter",sans-serif;overflow-x:hidden;}
+.font-anton{font-family:"Anton",sans-serif;letter-spacing:.01em;}
+
+/* ---------- Scroll rows ---------- */
+.scroll-row{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;scrollbar-width:none;}
+/* Center-kan kartu saat konten nggak penuh (margin auto jadi 0 pas overflow, aman di mobile) */
+#row-best > :first-child{margin-left:auto;}
+#row-best > :last-child{margin-right:auto;}
+.hide-scrollbar{scrollbar-width:none;}
+.hide-scrollbar::-webkit-scrollbar{display:none;}
+.scroll-row::-webkit-scrollbar{display:none;}
+
+/* ---------- Web scrollbar (halaman) ---------- */
+/* Chrome / Safari / Edge */
+html::-webkit-scrollbar{width:12px;}
+html::-webkit-scrollbar-track{background:#eef1f9;}
+html::-webkit-scrollbar-thumb{background:#4565bc;border-radius:99px;border:3px solid #eef1f9;}
+html::-webkit-scrollbar-thumb:hover{background:#183fad;}
+/* Firefox */
+@supports not selector(::-webkit-scrollbar){
+  html{scrollbar-width:thin;scrollbar-color:#4565bc #eef1f9;}
+}
+
+.scroll-btn{
+  position:absolute;top:38%;width:42px;height:42px;border-radius:50%;background:#fff;
+  box-shadow:0 10px 30px -12px rgba(19,35,74,.18);
+  display:flex;align-items:center;justify-content:center;color:#183fad;z-index:10;
+  transition:background .15s;cursor:pointer;border:none;font-size:1.4rem;line-height:1;
+}
+.scroll-btn:hover{background:#F1BF0A;color:#090909;}
+.scroll-btn.left{left:-8px;}
+.scroll-btn.right{right:-8px;}
+
+/* ---------- Marquee ---------- */
+.marquee{--gap:2.5rem;display:flex;overflow:hidden;gap:var(--gap);}
+.marquee-set{flex-shrink:0;display:flex;justify-content:space-around;min-width:100%;gap:var(--gap);animation:marquee 22s linear infinite;}
+.marquee-set:hover{animation-play-state:paused;}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(calc(-100% - var(--gap)))}}
+
+/* ---------- Smooth scroll (native, hormati reduced-motion) ---------- */
+@media (prefers-reduced-motion: no-preference){
+  html{scroll-behavior:smooth;}
+}
+</style>
+<style type="text/tailwindcss">
+@layer base {
+    body {
+        @apply min-h-dvh text-base font-normal text-[#090909] px-3.5 pt-3.5;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Semua section di-render oleh js/main.js dari js/sections/*.js -->
+<div id="app"></div>
+
+<script src='https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4'></script>
+<script src="js/data.js"></script>
+<script src="js/sections/nav.js"></script>
+<script src="js/sections/hero.js"></script>
+<script src="js/sections/produk.js"></script>
+<script src="js/sections/bento.js"></script>
+<script src="js/sections/trust.js"></script>
+<script src="js/sections/newsletter.js"></script>
+<script src="js/sections/footer.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
