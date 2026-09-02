@@ -27,15 +27,15 @@ window.App.data = {
 
     /* Bento kategori */
     bento: [
-        {img:"assets/BENTO/DigitalPrinting.webp", title:"Digital Printing", desc:"A0 – A4, poster, spanduk cepat", from:"#F1BF0A", to:"#d9a600", big:true},
-        {img:"assets/BENTO/StickerLabel.webp", title:"Sticker & Label", desc:"Custom shape, vinyl, kertas", from:"#4565bc", to:"#183fad"},
-        {img:"assets/BENTO/NameCard.webp", title:"Name Card", desc:"Kartu nama & undangan", from:"#3C3F4B", to:"#1F212B"},
-        {img:"assets/BENTO/DisplayPromotion.webp", title:"Display Promotion", desc:"X-banner, roll-up, booth", from:"#7f94c8", to:"#4565bc"},
-        {img:"assets/BENTO/LargeFormat.webp", title:"Large Format", desc:"Banner, MMT, canvas", from:"#4565bc", to:"#183fad"},
-        {img:"assets/BENTO/GarmentTextile.webp", title:"Garment & Textile", desc:"Kaos, tas custom, jersey", from:"#183fad", to:"#13234A"},
-        {img:"assets/BENTO/Stationary.webp", title:"Stationary", desc:"Buku agenda, kalender", from:"#3C3F4B", to:"#1F212B"},
-        {img:"assets/BENTO/Merchandise.webp", title:"Merchandise", desc:"Tumbler, totebag, mug", from:"#7f94c8", to:"#4565bc"},
-        {img:"assets/BENTO/Packaging.webp", title:"Packaging", desc:"Paper bag, box, wrapping", from:"#183fad", to:"#13234A"},
+        {img:"assets/BENTO/DigitalPrinting.webp", title:"Digital Printing", desc:"A0 – A4, poster, spanduk cepat", from:"#D4DC24", to:"#d9a600", big:true},
+        {img:"assets/BENTO/StickerLabel.webp", title:"Sticker & Label", desc:"Custom shape, vinyl, kertas", from:"#62684A", to:"#1E2412"},
+        {img:"assets/BENTO/NameCard.webp", title:"Name Card", desc:"Kartu nama & undangan", from:"#62684A", to:"#1E2412"},
+        {img:"assets/BENTO/DisplayPromotion.webp", title:"Display Promotion", desc:"X-banner, roll-up, booth", from:"#7f94c8", to:"#62684A"},
+        {img:"assets/BENTO/LargeFormat.webp", title:"Large Format", desc:"Banner, MMT, canvas", from:"#62684A", to:"#1E2412"},
+        {img:"assets/BENTO/GarmentTextile.webp", title:"Garment & Textile", desc:"Kaos, tas custom, jersey", from:"#1E2412", to:"#1E2412"},
+        {img:"assets/BENTO/Stationary.webp", title:"Stationary", desc:"Buku agenda, kalender", from:"#62684A", to:"#1E2412"},
+        {img:"assets/BENTO/Merchandise.webp", title:"Merchandise", desc:"Tumbler, totebag, mug", from:"#7f94c8", to:"#62684A"},
+        {img:"assets/BENTO/Packaging.webp", title:"Packaging", desc:"Paper bag, box, wrapping", from:"#1E2412", to:"#1E2412"},
     ],
 
     /* Dropdown nav Kategori */

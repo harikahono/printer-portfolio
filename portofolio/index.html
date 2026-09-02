@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portofolio Hasil Cetak | Anugerah Printer</title>
+<meta name="description" content="Lihat hasil kerja kami dalam mencetak buku, banner, merchandise, dan berbagai produk printing berkualitas.">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="../css/site.css">
+<style type="text/tailwindcss">
+@layer base { body { @apply min-h-dvh text-base font-normal text-[#1E2412] bg-[#EFECD8] px-3.5 pt-3.5; } }
+</style>
+</head>
+<body>
+<div id="site-nav"></div>
+
+<header class="max-w-7xl 2xl:max-w-[1440px] w-full mx-auto bg-[#D4DC24] text-[#1E2412] rounded-tl-4xl rounded-b-4xl p-7 sm:p-10 relative overflow-hidden">
+  <div class="relative z-10">
+    <h1 class="font-anton text-4xl sm:text-5xl leading-none text-[#1E2412]">PORTOFOLIO<br>HASIL CETAK</h1>
+    <p class="text-sm/6 text-[#1E2412]/70 mt-3 max-w-xl">Dokumentasi proyek yang telah kami kerjakan untuk klien dari berbagai industri.</p>
+  </div>
+  <span aria-hidden="true" class="absolute -right-4 -bottom-4 font-anton text-[7rem] leading-none text-[#1E2412]/[0.06]">PORTOFOLIO</span>
+</header>
+
+<main class="max-w-7xl 2xl:max-w-[1440px] w-full mx-auto mt-8">
+  <div class="flex flex-wrap gap-2" id="filters">
+    <button data-filter="Semua" class="filter-btn active bg-[#1E2412] text-white rounded-full px-4 py-2 text-sm font-bold">Semua</button>
+    <button data-filter="Offset Printing" class="filter-btn bg-white border border-[#1E2412]/10 rounded-full px-4 py-2 text-sm font-bold">Offset Printing</button>
+    <button data-filter="Indoor/Outdoor" class="filter-btn bg-white border border-[#1E2412]/10 rounded-full px-4 py-2 text-sm font-bold">Indoor/Outdoor</button>
+    <button data-filter="Merchandise" class="filter-btn bg-white border border-[#1E2412]/10 rounded-full px-4 py-2 text-sm font-bold">Merchandise</button>
+    <button data-filter="UV Printing" class="filter-btn bg-white border border-[#1E2412]/10 rounded-full px-4 py-2 text-sm font-bold">UV Printing</button>
+  </div>
+
+  <div id="grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6"></div>
+
+  <section class="mt-10 bg-[#D4DC24] rounded-[2rem] p-6 sm:p-8 text-center">
+    <h2 class="font-anton text-2xl sm:text-3xl text-[#1E2412]">TERTARIK DENGAN HASIL KERJA KAMI?</h2>
+    <p class="text-sm/5 text-[#1E2412]/70 mt-1">Kami siap membantu mewujudkan proyek Anda dengan kualitas terbaik.</p>
+    <a href="https://wa.me/6285885928506" target="_blank" rel="noopener" class="mt-4 inline-flex bg-[#1E2412] text-white rounded-full px-6 py-3 font-bold">Mulai Proyek Anda</a>
+  </section>
+</main>
+
+<div id="site-footer" class="mt-16"></div>
+
+<!-- lightbox -->
+<div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60 backdrop-blur p-4">
+  <div class="bg-white rounded-[1.5rem] max-w-2xl w-full overflow-hidden">
+    <div class="relative"><img id="lb-img" src="" alt="" class="w-full h-72 object-cover"><button id="lb-close" class="absolute top-3 right-3 size-9 rounded-full bg-white/90 flex items-center justify-center">✕</button></div>
+    <div class="p-5"><span id="lb-cat" class="text-xs font-bold tracking-[.12em] text-[#62684A]"></span><h3 id="lb-title" class="font-bold text-[#1E2412] mt-1"></h3><p id="lb-desc" class="text-sm text-[#62684A] mt-1"></p></div>
+  </div>
+</div>
+
+<script src="../js/data.js"></script>
+<script src="../js/components/nav.js"></script>
+<script src="../js/components/footer.js"></script>
+<script src="../js/chrome.js"></script>
+<script>
+const items = [
+  {cat:"Offset Printing", title:"Cetak Buku Hard Cover", desc:"Company Profile PT XYZ - 500 eksemplar", img:"../assets/PRODUK/BukuKopSuratPerusahaan.webp"},
+  {cat:"Offset Printing", title:"Katalog Produk", desc:"Katalog fashion 48 halaman - laminasi glossy", img:"../assets/BENTO/DigitalPrinting.webp"},
+  {cat:"Indoor/Outdoor", title:"Roll Up Banner Event", desc:"Branding booth pameran - 10 pcs", img:"../assets/BENTO/LargeFormat.webp"},
+  {cat:"Indoor/Outdoor", title:"Spanduk Outdoor", desc:"Ukuran 3x10 meter - flexi China", img:"../assets/BENTO/DisplayPromotion.webp"},
+  {cat:"Merchandise", title:"Tumbler UV Print", desc:"Souvenir corporate - 200 pcs", img:"../assets/BENTO/Merchandise.webp"},
+  {cat:"Merchandise", title:"Kaos DTF Event", desc:"Seragam gathering - 100 pcs", img:"../assets/BENTO/GarmentTextile.webp"},
+  {cat:"Merchandise", title:"Paper Bag Custom", desc:"Packaging UMKM - 1000 pcs", img:"../assets/BENTO/Packaging.webp"},
+  {cat:"UV Printing", title:"Kartu Nama Premium", desc:"Spot UV & emboss - 500 lembar", img:"../assets/BENTO/NameCard.webp"},
+  {cat:"Offset Printing", title:"Kalender Dinding", desc:"Kalender 2024 custom - 300 pcs", img:"../assets/BENTO/Stationary.webp"},
+  {cat:"Indoor/Outdoor", title:"Stiker Label Produk", desc:"Label kemasan - 5000 pcs", img:"../assets/BENTO/StickerLabel.webp"},
+  {cat:"Merchandise", title:"Mug Custom Logo", desc:"Gift untuk klien - 50 pcs", img:"../assets/BENTO/Merchandise.webp"},
+  {cat:"UV Printing", title:"Plakat Akrilik", desc:"Award company - 20 pcs", img:"../assets/PRODUK/MedaliAkrilik.webp"},
+];
+const grid = document.getElementById('grid');
+function render(filter="Semua"){
+  grid.innerHTML = items.filter(i=> filter==="Semua" || i.cat===filter).map(i=>`
+    <button data-cat="${i.cat}" class="text-left bg-white rounded-3xl overflow-hidden border border-[#1E2412]/10 hover:-translate-y-1 transition-transform">
+      <div class="h-44 overflow-hidden"><img src="${i.img}" alt="${i.title}" loading="lazy" class="w-full h-full object-cover"></div>
+      <div class="p-4"><span class="text-[11px] font-bold tracking-[.12em] text-[#62684A]">${i.cat}</span><h3 class="font-bold text-sm text-[#1E2412]">${i.title}</h3><p class="text-xs text-[#62684A] mt-1">${i.desc}</p></div>
+    </button>`).join('');
+  grid.querySelectorAll('button').forEach((b,idx)=>{
+    b.addEventListener('click',()=> openLB(items.filter(i=> filter==="Semua" || i.cat===filter)[idx]));
+  });
+}
+function openLB(it){ document.getElementById('lb-img').src=it.img; document.getElementById('lb-cat').textContent=it.cat; document.getElementById('lb-title').textContent=it.title; document.getElementById('lb-desc').textContent=it.desc; document.getElementById('lightbox').classList.remove('hidden'); document.getElementById('lightbox').classList.add('flex'); document.body.style.overflow='hidden'; }
+function closeLB(){ document.getElementById('lightbox').classList.add('hidden'); document.getElementById('lightbox').classList.remove('flex'); document.body.style.overflow=''; }
+document.getElementById('lb-close').addEventListener('click', closeLB);
+document.getElementById('lightbox').addEventListener('click', e=>{ if(e.target.id==='lightbox') closeLB(); });
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeLB(); });
+document.querySelectorAll('.filter-btn').forEach(b=>{
+  b.addEventListener('click', ()=>{
+    document.querySelectorAll('.filter-btn').forEach(x=>{ x.className='filter-btn bg-white border border-[#1E2412]/10 rounded-full px-4 py-2 text-sm font-bold'; });
+    b.className='filter-btn active bg-[#1E2412] text-white rounded-full px-4 py-2 text-sm font-bold';
+    render(b.dataset.filter);
+  });
+});
+render();
+</script>
+</body>
+</html>

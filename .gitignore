@@ -1,1 +1,7 @@
 dist/
+docs/
+.playwright-mcp/
+.impeccable/
+temp
+*.bak
+incumbent-landing-viewport.png

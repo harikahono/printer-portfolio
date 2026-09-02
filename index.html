@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anugerah Printer — Solusi Cetak Offset & Digital Printing Terpercaya di Jakarta</title>
+<link rel="stylesheet" href="css/site.css">
+<style>
+body{overflow-x:hidden;}
+
+/* Center-kan kartu saat konten nggak penuh (margin auto jadi 0 pas overflow, aman di mobile) */
+/* .scroll-row / .scroll-btn / .hide-scrollbar sekarang global di css/site.css */
+#row-best > :first-child{margin-left:auto;}
+#row-best > :last-child{margin-right:auto;}
+
+/* ---------- Marquee ---------- */
+.marquee{--gap:2.5rem;display:flex;overflow:hidden;gap:var(--gap);}
+.marquee-set{flex-shrink:0;display:flex;justify-content:space-around;min-width:100%;gap:var(--gap);animation:marquee 22s linear infinite;}
+.marquee-set:hover{animation-play-state:paused;}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(calc(-100% - var(--gap)))}}
+</style>
+<style type="text/tailwindcss">
+@layer base {
+    body {
+        @apply min-h-dvh text-base font-normal text-[#1E2412] bg-[#EFECD8] px-3.5 pt-3.5;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Semua komponen halaman di-render oleh js/home.js dari js/components/*.js -->
+<div id="app"></div>
+
+<script src='https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4'></script>
+<script src="js/data.js"></script>
+<script src="js/components/nav.js"></script>
+<script src="js/components/hero.js"></script>
+<script src="js/components/produk.js"></script>
+<script src="js/components/bento.js"></script>
+<script src="js/components/trust.js"></script>
+<script src="js/components/newsletter.js"></script>
+<script src="js/components/footer.js"></script>
+<script src="js/components/product-card.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
