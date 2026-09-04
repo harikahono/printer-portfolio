@@ -19,4 +19,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://harikahono.github.io/printer-portfolio/sitemap.xml
+Sitemap: https://anugerahprinter.com/sitemap.xml
