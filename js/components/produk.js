@@ -11,7 +11,7 @@ App.components.produk = function () {
         <div class="relative z-10 grid lg:grid-cols-[.9fr_1.1fr] gap-8 items-end">
             <div>
                 <h2 class="font-anton text-3xl sm:text-5xl leading-[.95]">BUKAN MAKELAR.<br><span class="text-[#D4DC24]">PRODUKSI SENDIRI.</span></h2>
-                <p class="text-sm/6 text-white/65 mt-4 max-w-md">Kontrol penuh dari file, bahan, mesin, sampai finishing — jadi diskusi harga tetap realistis tanpa mengorbankan hasil.</p>
+                <p class="text-sm/6 text-white/65 mt-4 max-w-md">File, bahan, mesin, dan finishing ditangani tim internal. Estimasi harga dibahas dari spesifikasi yang jelas.</p>
             </div>
 
             <div class="grid gap-2">
@@ -24,7 +24,7 @@ App.components.produk = function () {
         </div>
 
         <div class="relative z-10 mt-7 grid sm:grid-cols-2 gap-3">
-            <div class="rounded-2xl bg-white/8 border border-white/10 p-4"><span class="font-anton text-2xl text-[#D4DC24]">FLEKSIBEL</span><p class="text-xs/5 text-white/65 mt-1">Estimasi harga bisa didiskusikan mengikuti volume, bahan, dan finishing.</p></div>
+            <div class="rounded-2xl bg-white/8 border border-white/10 p-4"><span class="font-anton text-2xl text-[#D4DC24]">FLEKSIBEL</span><p class="text-xs/5 text-white/65 mt-1">Harga mengikuti volume, bahan, ukuran, dan finishing yang dipilih.</p></div>
             <div class="rounded-2xl bg-white/8 border border-white/10 p-4"><span class="font-anton text-2xl">BUKA 21.00</span><p class="text-xs/5 text-white/65 mt-1">Konsultasi tetap nyaman setelah jam kantor, Senin sampai Sabtu.</p></div>
         </div>
     </div>

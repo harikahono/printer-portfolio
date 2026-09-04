@@ -22,7 +22,7 @@ App.components.nav = function () {
         </ul>
 
         <div class="flex items-center gap-4 ml-auto">
-        <button type="button" class="md:hidden cursor-pointer rounded" onclick="toggleMenu()" aria-label="Buka Menu" aria-expanded="false" aria-controls="mobile-menu">
+        <button type="button" class="md:hidden size-11 flex items-center justify-center cursor-pointer rounded" onclick="toggleMenu()" aria-label="Buka Menu" aria-expanded="false" aria-controls="mobile-menu">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-9 text-[#1E2412]">
                 <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
             </svg>
@@ -47,7 +47,7 @@ App.components.nav = function () {
         <a href="${home || 'index.html'}" class="flex items-center">
             <img src="${root}assets/logoanugerah.png" alt="Anugerah Printer" class="h-7 w-auto object-contain">
         </a>
-        <button type="button" class="size-10 rounded-full bg-white/10 hover:bg-[#D4DC24] hover:text-[#1E2412] transition-colors flex items-center justify-center" onclick="toggleMenu()" aria-label="Tutup menu">
+        <button type="button" class="size-11 rounded-full bg-white/10 hover:bg-[#D4DC24] hover:text-[#1E2412] transition-colors flex items-center justify-center" onclick="toggleMenu()" aria-label="Tutup menu">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="size-5"><path d="M18 6 6 18M6 6l12 12"/></svg>
         </button>
     </div>

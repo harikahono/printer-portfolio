@@ -54,3 +54,9 @@ html::-webkit-scrollbar-thumb:hover{background:#1E2412;}
 .scroll-btn:hover{background:#D4DC24;color:#1E2412;}
 .scroll-btn.left{left:-8px;}
 .scroll-btn.right{right:-8px;}
+
+@media (max-width:640px){
+  nav button[aria-controls="mobile-menu"]{width:44px !important;height:44px !important;display:flex;align-items:center;justify-content:center;}
+  main a,#filters button,summary,footer a{min-height:44px !important;min-width:44px;display:inline-flex;align-items:center;}
+  footer ul a{display:flex;}
+}
