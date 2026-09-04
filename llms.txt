@@ -1,0 +1,32 @@
+# Anugerah Printer
+
+Anugerah Printer adalah workshop percetakan di Pondok Labu, Jakarta Selatan. Website ini membantu calon klien melihat layanan cetak, memahami proses quote, dan menghubungi tim lewat WhatsApp atau kunjungan workshop.
+
+## Layanan utama
+
+- Cetak offset: buku, majalah, katalog, brosur, kalender, kop surat, amplop, dan map folder.
+- Indoor/outdoor printing: spanduk, roll up banner, X banner, stiker vinyl, backdrop, dan large format printing.
+- Merchandise dan DTF: mug, tumbler, payung, kaos DTF, gantungan, goodie bag, dan kebutuhan event.
+- UV printing dan produk custom: cetak di akrilik, kayu, kaca, metal, packaging, dan media custom.
+- Paper supply: Art Paper, HVS, BC, Mattes, dan bahan stiker.
+
+## Cara minta quote
+
+Kirim brief lewat WhatsApp berisi jenis produk, ukuran, jumlah, bahan, finishing, deadline, dan file desain bila ada. File desain dikirim terpisah melalui chat.
+
+## Kontak
+
+- WhatsApp: 0858 8592 8506
+- Jam buka: Senin-Sabtu, 09.00-21.00 WIB
+- Alamat: Jl. H. Ipin No. 5, RT 11/RW 06, Pondok Labu, Cilandak, Jakarta Selatan, DKI Jakarta 12450
+- Instagram: @anugerahdigitalprinter
+
+## Halaman penting
+
+- Beranda: /
+- Layanan: /layanan/
+- Portofolio: /portofolio/
+- Tentang Kami: /tentang-kami/
+- Kontak dan form quote: /kontak/
+- Panduan quote: /quote-guide.md
+- Ringkasan layanan: /services.md
