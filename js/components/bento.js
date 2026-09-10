@@ -11,7 +11,7 @@ App.components.bento = function () {
                 <h2 class="font-anton text-3xl sm:text-5xl leading-[.95] text-[#1E2412]">REQUEST QUOTE<br>WORK ORDER</h2>
                 <p class="text-sm/6 text-[#1E2412]/70 mt-4">Format singkat: kirim brief, cek spesifikasi, setujui estimasi, lalu produksi jalan.</p>
             </div>
-            <a href="https://wa.me/6285885928506?text=Halo%20Anugerah%20Printer,%20saya%20ingin%20request%20penawaran%20harga" target="_blank" rel="noopener" class="mt-8 inline-flex w-max items-center gap-2 bg-[#1E2412] text-white rounded-full px-5 py-3 text-sm font-bold">Minta Quote <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+            <a href="https://wa.me/6285885928506?text=Halo%20Anugerah%20Printer,%20saya%20ingin%20request%20quote" target="_blank" rel="noopener" class="mt-8 inline-flex w-max items-center gap-2 bg-[#1E2412] text-white rounded-full px-5 py-3 text-sm font-bold">Minta Quote <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
         </div>
 
         <div data-reveal data-reveal-delay="2" class="bg-[#EFECD8] border border-[#1E2412]/10 rounded-[2rem] rounded-tl-[3rem] p-5 sm:p-6">

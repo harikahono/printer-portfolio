@@ -48,10 +48,13 @@
 
   <div id="grid" class="flex gap-4 mt-6 items-start"></div>
 
+  <p id="page-info" class="text-center text-xs text-[#62684A] mt-6" aria-live="polite"></p>
+  <div id="pagination" class="flex flex-wrap items-center justify-center gap-2 mt-3"></div>
+
   <section class="mt-10 bg-[#D4DC24] rounded-[2rem] p-6 sm:p-8 text-center">
     <h2 class="font-anton text-2xl sm:text-3xl text-[#1E2412]">TERTARIK DENGAN HASIL KERJA KAMI?</h2>
     <p class="text-sm/5 text-[#1E2412]/70 mt-1">Kirim contoh referensi, ukuran, bahan, jumlah, dan deadline untuk estimasi awal.</p>
-    <a href="https://wa.me/6285885928506" target="_blank" rel="noopener" class="mt-4 inline-flex bg-[#1E2412] text-white rounded-full px-6 py-3 font-bold">Minta Quote via WhatsApp</a>
+    <a href="https://wa.me/6285885928506?text=Halo%20Anugerah%20Printer%2C%20saya%20tertarik%20dengan%20hasil%20cetak%20di%20portofolio%3A%0AProduk%20yang%20diinginkan%3A%20%0ANama%3A%20" target="_blank" rel="noopener" class="mt-4 inline-flex bg-[#1E2412] text-white rounded-full px-6 py-3 font-bold">Minta Quote via WhatsApp</a>
   </section>
 </main>
 
@@ -234,17 +237,71 @@ function closeLB() { document.getElementById('lightbox').classList.add('hidden')
 document.getElementById('lb-close').addEventListener('click', closeLB);
 document.getElementById('lightbox').addEventListener('click', e => { if (e.target.id === 'lightbox') closeLB(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLB(); });
+const PER_PAGE = 12;
+let currentFilter = 'Semua', currentPage = 1;
+const pager = document.getElementById('pagination');
+const pageInfo = document.getElementById('page-info');
+grid.setAttribute('tabindex', '-1');
+const reducedMotion = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function filtered() {
+  return items.filter(i => currentFilter === 'Semua' || i.cat === currentFilter);
+}
+
+function renderPager(total, pages) {
+  const start = total ? (currentPage - 1) * PER_PAGE + 1 : 0;
+  const end = Math.min(total, currentPage * PER_PAGE);
+  pageInfo.textContent = total ? `Menampilkan ${start}\u2013${end} dari ${total}` : 'Tidak ada hasil';
+  pager.innerHTML = '';
+  pager.style.display = pages <= 1 ? 'none' : '';
+  pageInfo.style.display = pages <= 1 && total ? 'none' : '';
+  if (pages <= 1) return;
+  const btn = (label, page, opts = {}) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.textContent = label;
+    b.disabled = !!opts.disabled;
+    if (opts.label) b.setAttribute('aria-label', opts.label);
+    if (opts.current) b.setAttribute('aria-current', 'page');
+    b.className = (opts.current ? 'bg-[#1E2412] text-white border border-[#1E2412]' : 'bg-white border border-[#1E2412]/10') + ' rounded-full px-4 py-2 text-sm font-bold min-h-11 min-w-11' + (opts.disabled ? ' opacity-40' : '');
+    if (!opts.disabled) b.addEventListener('click', () => gotoPage(page));
+    return b;
+  };
+  pager.appendChild(btn('\u2039', currentPage - 1, { disabled: currentPage <= 1, label: 'Halaman sebelumnya' }));
+  for (let p = 1; p <= pages; p++) pager.appendChild(btn(String(p), p, { current: p === currentPage, label: `Halaman ${p}` }));
+  pager.appendChild(btn('\u203A', currentPage + 1, { disabled: currentPage >= pages, label: 'Halaman berikutnya' }));
+}
+
+function render(scroll) {
+  const list = filtered();
+  const pages = Math.max(1, Math.ceil(list.length / PER_PAGE));
+  if (currentPage > pages) currentPage = pages;
+  layout(list.slice((currentPage - 1) * PER_PAGE, currentPage * PER_PAGE));
+  renderPager(list.length, pages);
+  if (scroll) {
+    grid.scrollIntoView({ behavior: reducedMotion() ? 'auto' : 'smooth', block: 'start' });
+    grid.focus({ preventScroll: true });
+  }
+}
+
+function gotoPage(p) {
+  currentPage = p;
+  render(true);
+}
+
 document.querySelectorAll('.filter-btn').forEach(b => {
   b.addEventListener('click', () => {
     document.querySelectorAll('.filter-btn').forEach(x => { x.className = 'filter-btn bg-white border border-[#1E2412]/10 rounded-full px-4 py-2 text-sm font-bold'; });
     b.className = 'filter-btn active bg-[#1E2412] text-white rounded-full px-4 py-2 text-sm font-bold';
-    layout(items.filter(i => b.dataset.filter === 'Semua' || i.cat === b.dataset.filter));
+    currentFilter = b.dataset.filter;
+    currentPage = 1;
+    render(false);
   });
 });
 let rT;
 window.addEventListener('resize', () => { clearTimeout(rT); rT = setTimeout(() => layout(currentList), 150); });
 if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => layout(currentList));
-layout(items);
+render(false);
 </script>
 </body>
 </html>

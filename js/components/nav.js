@@ -14,7 +14,7 @@ App.components.nav = function () {
     </a>
 
     <div class="flex items-center gap-4 flex-1 bg-[#D4DC24] text-[#1E2412] p-3.5 rounded-t-4xl">
-        <ul class="hidden md:flex items-center gap-5 py-2.5 text-sm/6 font-medium ml-4">
+        <ul class="hidden md:flex items-center gap-5 py-2.5 text-sm/6 font-bold uppercase tracking-[.08em] ml-4">
             <li><a href="${root}layanan/" class="hover:text-white transition-colors">Layanan</a></li>
             <li><a href="${root}portofolio/" class="hover:text-white transition-colors">Portofolio</a></li>
             <li><a href="${root}tentang-kami/" class="hover:text-white transition-colors">Tentang Kami</a></li>

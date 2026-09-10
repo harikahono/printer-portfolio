@@ -11,7 +11,7 @@ App.components.newsletter = function () {
             <p class="text-[#1E2412]/70 text-sm/5 mt-1.5 max-w-xl">Hubungi tim kami untuk diskusi produk dan estimasi harga yang pas di kantong. Konsultasi gratis!</p>
         </div>
         <div class="flex flex-wrap gap-3">
-            <a href="https://wa.me/6285885928506" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-[#1E2412] text-white rounded-full py-3 px-6 font-bold hover:bg-black transition-colors">Chat via WhatsApp Sekarang</a>
+            <a href="https://wa.me/6285885928506?text=Halo%20Anugerah%20Printer%2C%20saya%20ingin%20konsultasi%20gratis%20tentang%20kebutuhan%20cetak%20bisnis%3A%0AKebutuhan%3A%20%0ANama%3A%20" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-[#1E2412] text-white rounded-full py-3 px-6 font-bold hover:bg-black transition-colors">Chat via WhatsApp Sekarang</a>
             <a href="portofolio/" class="inline-flex items-center gap-2 bg-white text-[#1E2412] rounded-full py-3 px-6 font-bold border border-[#1E2412]/10 hover:border-[#1E2412] transition-colors">Lihat Portofolio Kami</a>
         </div>
     </div>

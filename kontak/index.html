@@ -33,6 +33,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:opsz,wght@14..32,100..900&display=swap">
 <link rel="stylesheet" href="../css/site.css?v=3">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <style type="text/tailwindcss">
 @layer base { body { @apply min-h-dvh text-base font-normal text-[#1E2412] bg-[#EFECD8] px-3.5 pt-3.5; } input, textarea, select { @apply w-full rounded-xl border border-[#1E2412]/10 bg-white px-3.5 py-3 text-sm outline-none transition placeholder:text-[#62684A]/60 focus:border-[#1E2412] focus:ring-3 focus:ring-[#1E2412]/10; } }
 </style>
@@ -65,7 +66,7 @@
       <div><p class="text-sm font-bold text-white leading-tight">0858 8592 8506<br><span class="font-normal text-white/70">WhatsApp fast reply</span></p></div>
     </div>
   </div>
-  <a href="https://wa.me/6285885928506" target="_blank" rel="noopener" class="shrink-0 inline-flex justify-center bg-[#D4DC24] text-[#1E2412] rounded-full px-6 py-3 text-sm font-bold">Chat via WhatsApp</a>
+  <a href="https://wa.me/6285885928506?text=Halo%20Anugerah%20Printer%2C%20saya%20ingin%20bertanya%20tentang%20layanan%20cetak%3A%0APertanyaan%3A%20%0ANama%3A%20" target="_blank" rel="noopener" class="shrink-0 inline-flex justify-center bg-[#D4DC24] text-[#1E2412] rounded-full px-6 py-3 text-sm font-bold">Chat via WhatsApp</a>
 </section>
 
 <!-- visit ticket -->
@@ -80,7 +81,7 @@
     <a href="https://www.google.com/maps/search/Jl.+H.+Ipin+No.+5+Pondok+Labu" target="_blank" rel="noopener" class="mt-auto inline-flex w-max gap-2 bg-[#1E2412] text-white rounded-full px-5 py-3 text-sm font-bold">Buka Google Maps <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
   </div>
   <div class="bg-white rounded-[2rem] rounded-br-[2.5rem] p-2 border border-[#1E2412]/10">
-    <div class="rounded-[1.5rem] overflow-hidden h-[360px]"><iframe title="Lokasi Anugerah Printer" src="https://www.google.com/maps?q=Jl.+H.+Ipin+No.+5+Pondok+Labu+Jakarta+Selatan&z=15&output=embed" class="w-full h-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    <div id="map" class="rounded-[1.5rem] overflow-hidden h-[360px] isolate relative z-0"></div>
   </div>
 </section>
 
@@ -116,7 +117,7 @@
       <div class="mt-4 bg-white/10 rounded-2xl p-4"><p class="text-xs font-bold tracking-[.12em] text-white/50">PRIVACY</p><p class="text-xs/5 text-white/70 mt-1">Tidak ada database. Semua via chat pribadi.</p></div>
     </div>
     <div class="bg-[#D4DC24] rounded-[2rem] p-6">
-      <h3 class="font-anton text-xl text-[#1E2412]">BUTUH CEPAT?</h3><p class="text-sm/5 text-[#1E2412]/70 mt-1">Langsung kirim brief singkat lewat WhatsApp.</p><a href="https://wa.me/6285885928506" target="_blank" rel="noopener" class="mt-3 inline-flex bg-[#1E2412] text-white rounded-full px-5 py-3 text-sm font-bold">Chat Sekarang</a>
+      <h3 class="font-anton text-xl text-[#1E2412]">BUTUH CEPAT?</h3><p class="text-sm/5 text-[#1E2412]/70 mt-1">Langsung kirim brief singkat lewat WhatsApp.</p><a href="https://wa.me/6285885928506?text=Halo%20Anugerah%20Printer%2C%20saya%20butuh%20cetak%20cepat%3A%0AKebutuhan%3A%20%0ADeadline%3A%20%0ANama%3A%20" target="_blank" rel="noopener" class="mt-3 inline-flex bg-[#1E2412] text-white rounded-full px-5 py-3 text-sm font-bold">Chat Sekarang</a>
     </div>
     <div class="bg-white rounded-[2rem] p-6 border border-[#1E2412]/10">
       <h3 class="font-anton text-lg text-[#1E2412]">FAQ — CEPAT</h3>
@@ -135,6 +136,16 @@
 <script src="../js/components/nav.js"></script>
 <script src="../js/components/footer.js"></script>
 <script src="../js/chrome.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+/* Peta lokasi — Leaflet + Esri WorldStreetMap (gratis, tanpa API key) */
+(function(){
+  const lat = -6.3119, lng = 106.7897; /* Anugerah Printer, Jl. H. Ipin No.5 — dari Google Maps */
+  const map = L.map('map', {scrollWheelZoom:false}).setView([lat, lng], 16);
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {attribution:'Tiles &copy; Esri &mdash; Source: Esri, Maxar, Earthstar Geographics', maxZoom:19}).addTo(map);
+  L.marker([lat, lng]).addTo(map).bindPopup('<b>Anugerah Printer</b><br>Jl. H. Ipin No.5, Pondok Labu<br><a href="https://www.google.com/maps/dir/?api=1&destination=-6.3119,106.7897" target="_blank" rel="noopener">Rute ke sini</a>').openPopup();
+})();
+</script>
 <script>
 const form = document.getElementById('quote-form');
 const statusEl = document.getElementById('q-status');
@@ -142,7 +153,7 @@ const waHint = document.getElementById('q-wa-hint');
 function isValidWA(v){ const s=v.replace(/[^0-9]/g,''); return s.length>=10 && s.length<=15 && /^0?8/.test(s) || s.startsWith('62'); }
 function waLink(data){
   const lines = [
-    `Halo Anugerah Printer, saya ingin request penawaran harga:`,
+    `Halo Anugerah Printer, saya ingin request quote:`,
     `Nama: ${data.name}`,
     data.company?`Perusahaan: ${data.company}`:'',
     `WhatsApp: ${data.wa}`,
