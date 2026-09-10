@@ -20,7 +20,7 @@ App.components.hero = function () {
                     </div>
                     <span class="relative z-10">Minta Quote via WhatsApp</span>
                 </a>
-                <a href="#kategori" class="inline-flex min-h-11 items-center gap-2 rounded-full py-2.5 px-6 text-sm/4 font-bold border-2 border-[#1E2412]/20 hover:border-[#1E2412] hover:bg-[#1E2412] hover:text-white transition-colors">Lihat Layanan Kami</a>
+                <a href="layanan/" class="inline-flex min-h-11 items-center gap-2 rounded-full py-2.5 px-6 text-sm/4 font-bold border-2 border-[#1E2412]/20 hover:border-[#1E2412] hover:bg-[#1E2412] hover:text-white transition-colors">Lihat Layanan Kami</a>
             </div>
             <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 bg-[#1E2412] rounded-2xl p-4 text-white max-w-xl">
                 <div>

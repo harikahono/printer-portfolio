@@ -71,14 +71,24 @@
 
 <!-- visit ticket -->
 <section class="mt-6 grid lg:grid-cols-[.95fr_1.05fr] gap-4">
-  <div class="bg-white rounded-[2rem] rounded-tl-[2.5rem] p-6 sm:p-8 border border-[#1E2412]/10 flex flex-col">
-    <span class="text-[11px] font-bold tracking-[.14em] text-[#62684A]">VISIT TICKET — ADMIT ONE</span>
-    <h2 class="font-anton text-2xl text-[#1E2412] leading-none mt-2">DATANG LANGSUNG<br><span class="text-[#1E2412]/40">LIHAT SAMPLE</span></h2>
-    <p class="text-sm/6 text-[#62684A] mt-3">Jl. H. Ipin No.5, RT 11/RW 06, Pondok Labu, Kec. Cilandak, Jakarta Selatan 12450. Datang untuk cek sample, bahas bahan, dan konsultasi file.</p>
-    <div class="mt-4 flex flex-wrap gap-2">
-      <span class="rounded-full bg-[#EFECD8] px-3 py-1 text-xs font-bold">Cek Sample</span><span class="rounded-full bg-[#EFECD8] px-3 py-1 text-xs font-bold">Konsultasi File</span><span class="rounded-full bg-[#D4DC24] px-3 py-1 text-xs font-bold">Nego Harga</span>
+  <div class="relative overflow-hidden bg-white rounded-[2rem] rounded-tl-[2.5rem] p-6 sm:p-8 border border-[#1E2412]/10 flex flex-col">
+    <div class="flex items-center gap-3">
+      <span aria-hidden="true" class="size-2 rounded-full bg-[#D4DC24] ring-4 ring-[#D4DC24]/25 shrink-0"></span>
+      <span class="text-[11px] font-bold tracking-[.14em] text-[#62684A]">VISIT TICKET</span>
+      <span aria-hidden="true" class="h-px flex-1 bg-[#1E2412]/10"></span>
+      <span class="rounded-full bg-[#1E2412] text-white px-3 py-1 text-[11px] font-extrabold tracking-[.12em]">ADMIT ONE</span>
     </div>
-    <a href="https://www.google.com/maps/search/Jl.+H.+Ipin+No.+5+Pondok+Labu" target="_blank" rel="noopener" class="mt-auto inline-flex w-max gap-2 bg-[#1E2412] text-white rounded-full px-5 py-3 text-sm font-bold">Buka Google Maps <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+    <h2 class="font-anton text-3xl text-[#1E2412] leading-none mt-4">DATANG LANGSUNG<br><span class="underline decoration-[#D4DC24] decoration-4 underline-offset-4">LIHAT SAMPLE</span></h2>
+    <p class="mt-4 flex gap-2.5 text-sm/6 text-[#1E2412] font-semibold"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mt-1 shrink-0 text-[#62684A]"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Jl. H. Ipin No.5, RT 11/RW 06, Pondok Labu, Kec. Cilandak, Jakarta Selatan 12450.</p>
+    <p class="mt-2 text-sm/6 text-[#62684A]">Datang untuk cek sample, bahas bahan, dan konsultasi file.</p>
+    <div class="mt-4 mb-6 flex flex-wrap gap-2">
+      <span class="rounded-full bg-white border border-[#1E2412]/10 px-3 py-1.5 text-xs font-bold">Cek Sample</span><span class="rounded-full bg-white border border-[#1E2412]/10 px-3 py-1.5 text-xs font-bold">Konsultasi File</span><span class="rounded-full bg-[#D4DC24] px-3 py-1.5 text-xs font-bold">Nego Harga</span>
+    </div>
+    <div class="relative mt-auto border-t border-dashed border-[#1E2412]/15 pt-5">
+      <span aria-hidden="true" class="absolute -top-2.5 -left-9 size-5 rounded-full bg-[#EFECD8]"></span>
+      <span aria-hidden="true" class="absolute -top-2.5 -right-9 size-5 rounded-full bg-[#EFECD8]"></span>
+      <a href="https://www.google.com/maps/search/Jl.+H.+Ipin+No.+5+Pondok+Labu" target="_blank" rel="noopener" class="inline-flex w-max items-center gap-2 bg-[#1E2412] text-white rounded-full px-5 py-3 text-sm font-bold hover:bg-black transition-colors">Buka Google Maps <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+    </div>
   </div>
   <div class="bg-white rounded-[2rem] rounded-br-[2.5rem] p-2 border border-[#1E2412]/10">
     <div id="map" class="rounded-[1.5rem] overflow-hidden h-[360px] isolate relative z-0"></div>
