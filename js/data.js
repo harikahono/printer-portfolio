@@ -42,7 +42,7 @@ window.App.data = {
     navKategori: ["Digital Printing", "Sticker & Label", "Name Card", "Large Format", "Garment & Textile", "Stationary", "Packaging", "Merchandise"],
 
     /* Marquee client */
-    clients: ["NOVA GROUP", "Bantex", "EPSON", "Cheil", "ASTRA", "KAI", "Telkom"],
+    clients: ["Bukalapak", "G4S", "OK Bank", "The Energy", "Standarpen Indonesia", "Paxel", "Avrist Insurance", "Ramayana Insurance", "Glico Manufacturing", "Pos Indonesia"],
 
     /* Footer kolom link */
     footer: {

@@ -3,7 +3,7 @@ window.App = window.App || {};
 window.App.components = window.App.components || {};
 
 App.components.footer = function () {
-    const isSub = location.pathname.split('/').length > 2;
+    const isSub = /\/(layanan|portofolio|tentang-kami|kontak)(\/|$)/.test(location.pathname);
     const root = isSub ? '../' : '';
     const href = {
         "Digital Printing": `${root}layanan/#indoor-outdoor`,

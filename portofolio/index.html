@@ -10,7 +10,7 @@
 <meta property="og:title" content="Contoh Hasil Cetak Anugerah Printer">
 <meta property="og:description" content="Lihat contoh jenis pekerjaan cetak untuk buku, banner, merchandise, stiker, dan UV printing.">
 <meta property="og:url" content="https://anugerahprinter.com/portofolio/">
-<meta property="og:image" content="https://anugerahprinter.com/assets/BENTO/Merchandise.webp">
+<meta property="og:image" content="https://anugerahprinter.com/assets/ANUGERAH/pf-tumbler.webp">
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 <link rel="stylesheet" href="../css/site.css">
 <style type="text/tailwindcss">
@@ -37,7 +37,7 @@
     <button data-filter="UV Printing" class="filter-btn bg-white border border-[#1E2412]/10 rounded-full px-4 py-2 text-sm font-bold">UV Printing</button>
   </div>
 
-  <div id="grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6"></div>
+  <div id="grid" class="flex gap-4 mt-6 items-start"></div>
 
   <section class="mt-10 bg-[#D4DC24] rounded-[2rem] p-6 sm:p-8 text-center">
     <h2 class="font-anton text-2xl sm:text-3xl text-[#1E2412]">TERTARIK DENGAN HASIL KERJA KAMI?</h2>
@@ -51,7 +51,7 @@
 <!-- lightbox -->
 <div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60 backdrop-blur p-4">
   <div class="bg-white rounded-[1.5rem] max-w-2xl w-full overflow-hidden">
-    <div class="relative"><img id="lb-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="" class="w-full h-72 object-cover"><button id="lb-close" class="absolute top-3 right-3 size-11 rounded-full bg-white/90 flex items-center justify-center">✕</button></div>
+    <div class="relative"><img id="lb-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="" class="w-full h-auto max-h-[70vh] object-contain"><button id="lb-close" class="absolute top-3 right-3 size-11 rounded-full bg-white/90 flex items-center justify-center">✕</button></div>
     <div class="p-5"><span id="lb-cat" class="text-xs font-bold tracking-[.12em] text-[#62684A]"></span><h3 id="lb-title" class="font-bold text-[#1E2412] mt-1"></h3><p id="lb-desc" class="text-sm text-[#62684A] mt-1"></p></div>
   </div>
 </div>
@@ -62,43 +62,180 @@
 <script src="../js/chrome.js"></script>
 <script>
 const items = [
-  {cat:"Offset Printing", title:"Cetak Buku Hard Cover", desc:"Company profile dan dokumen tebal untuk kebutuhan perusahaan", img:"../assets/PRODUK/BukuKopSuratPerusahaan.webp"},
-  {cat:"Offset Printing", title:"Katalog Produk", desc:"Katalog fashion 48 halaman - laminasi glossy", img:"../assets/BENTO/DigitalPrinting.webp"},
-  {cat:"Indoor/Outdoor", title:"Roll Up Banner Event", desc:"Branding booth, pameran, dan promosi indoor", img:"../assets/BENTO/LargeFormat.webp"},
-  {cat:"Indoor/Outdoor", title:"Spanduk Outdoor", desc:"Spanduk promosi ukuran besar untuk area luar ruang", img:"../assets/BENTO/DisplayPromotion.webp"},
-  {cat:"Merchandise", title:"Tumbler UV Print", desc:"Souvenir corporate dan hadiah event", img:"../assets/BENTO/Merchandise.webp"},
-  {cat:"Merchandise", title:"Kaos DTF Event", desc:"Kaos custom untuk event, gathering, dan seragam", img:"../assets/BENTO/GarmentTextile.webp"},
-  {cat:"Merchandise", title:"Paper Bag Custom", desc:"Packaging custom untuk toko, event, dan UMKM", img:"../assets/BENTO/Packaging.webp"},
-  {cat:"UV Printing", title:"Kartu Nama Premium", desc:"Kartu nama dengan opsi finishing khusus", img:"../assets/BENTO/NameCard.webp"},
-  {cat:"Offset Printing", title:"Kalender Dinding", desc:"Kalender custom untuk promosi dan kebutuhan kantor", img:"../assets/BENTO/Stationary.webp"},
-  {cat:"Indoor/Outdoor", title:"Stiker Label Produk", desc:"Label kemasan dan stiker promosi custom", img:"../assets/BENTO/StickerLabel.webp"},
-  {cat:"Merchandise", title:"Mug Custom Logo", desc:"Mug custom untuk souvenir dan promosi brand", img:"../assets/BENTO/Merchandise.webp"},
-  {cat:"UV Printing", title:"Plakat Akrilik", desc:"Plakat dan award custom berbahan akrilik", img:"../assets/PRODUK/MedaliAkrilik.webp"},
+  {cat:"Offset Printing", title:"Cetak Buku Hard Cover", desc:"Company profile dan dokumen tebal untuk kebutuhan perusahaan", img:"../assets/ANUGERAH/pf-buku-hard-cover.webp", w:900, h:736},
+  {cat:"Offset Printing", title:"Katalog Produk", desc:"Katalog fashion 48 halaman - laminasi glossy", img:"../assets/ANUGERAH/pf-katalog.webp", w:1000, h:742},
+  {cat:"Indoor/Outdoor", title:"Roll Up Banner Event", desc:"Branding booth, pameran, dan promosi indoor", img:"../assets/ANUGERAH/pf-roll-up.webp", w:940, h:1260},
+  {cat:"Indoor/Outdoor", title:"Spanduk Outdoor", desc:"Spanduk promosi ukuran besar untuk area luar ruang", img:"../assets/ANUGERAH/pf-spanduk-outdoor.webp", w:1000, h:1000},
+  {cat:"Merchandise", title:"Tumbler UV Print", desc:"Souvenir corporate dan hadiah event", img:"../assets/ANUGERAH/pf-tumbler.webp", w:709, h:1023},
+  {cat:"Merchandise", title:"Kaos DTF Event", desc:"Kaos custom untuk event, gathering, dan seragam", img:"../assets/ANUGERAH/pf-kaos-dtf.webp", w:413, h:295},
+  {cat:"Merchandise", title:"Paper Bag Custom", desc:"Packaging custom untuk toko, event, dan UMKM", img:"../assets/ANUGERAH/pf-paper-bag.webp", w:1000, h:650},
+  {cat:"UV Printing", title:"Kartu Nama Premium", desc:"Kartu nama dengan opsi finishing khusus", img:"../assets/ANUGERAH/pf-kartu-nama.webp", w:1000, h:706},
+  {cat:"Offset Printing", title:"Kalender Dinding", desc:"Kalender custom untuk promosi dan kebutuhan kantor", img:"../assets/ANUGERAH/pf-kalender.webp", w:1000, h:666},
+  {cat:"Indoor/Outdoor", title:"Stiker Label Produk", desc:"Label kemasan dan stiker promosi custom", img:"../assets/ANUGERAH/pf-stiker-label.webp", w:1000, h:622},
+  {cat:"Merchandise", title:"Mug Custom Logo", desc:"Mug custom untuk souvenir dan promosi brand", img:"../assets/ANUGERAH/pf-mug.webp", w:413, h:295},
+  {cat:"UV Printing", title:"Plakat Akrilik", desc:"Plakat dan award custom berbahan akrilik", img:"../assets/PRODUK/MedaliAkrilik.webp", w:600, h:600},
+  {cat:"Offset Printing", title:"Buku Soft Cover", desc:"Buku jilid lunak untuk katalog, novel, dan dokumentasi", img:"../assets/ANUGERAH/pf-buku-soft-cover.webp", w:1000, h:750},
+  {cat:"Offset Printing", title:"Buku Laporan Tahunan", desc:"Laporan tahunan perusahaan dengan jilid perfect binding", img:"../assets/ANUGERAH/pf-buku-tahunan.webp", w:1000, h:562},
+  {cat:"Offset Printing", title:"Buku Cetak Custom", desc:"Cetak buku berbagai ukuran dengan opsi jilid dan finishing", img:"../assets/ANUGERAH/pf-buku-custom.webp", w:1000, h:666},
+  {cat:"Offset Printing", title:"Buku Agenda", desc:"Agenda harian custom untuk perusahaan dan komunitas", img:"../assets/ANUGERAH/pf-agenda.webp", w:1000, h:578},
+  {cat:"Offset Printing", title:"Memo Pad", desc:"Memo pad custom dengan desain brand perusahaan", img:"../assets/ANUGERAH/pf-memo-pad.webp", w:640, h:480},
+  {cat:"Offset Printing", title:"Kop Surat", desc:"Cetak kop surat dan stationery perusahaan", img:"../assets/ANUGERAH/pf-kop-surat.webp", w:1000, h:834},
+  {cat:"Offset Printing", title:"Amplop Cetak Custom", desc:"Amplop besar dan kecil untuk dokumen serta undangan", img:"../assets/ANUGERAH/pf-amplop.webp", w:1000, h:750},
+  {cat:"Offset Printing", title:"Map Folder", desc:"Map folder perusahaan untuk dokumen dan proposal", img:"../assets/ANUGERAH/pf-map.webp", w:640, h:435},
+  {cat:"Offset Printing", title:"Kalender Meja", desc:"Kalender meja custom untuk kantor dan hadiah klien", img:"../assets/ANUGERAH/pf-kalender-meja.webp", w:1000, h:750},
+  {cat:"Offset Printing", title:"Kalender Promosi", desc:"Kalender custom untuk promosi brand dan produk", img:"../assets/ANUGERAH/pf-kalender-promosi.webp", w:1000, h:700},
+  {cat:"Offset Printing", title:"Packaging Kemasan", desc:"Kemasan custom untuk produk dan merchandise", img:"../assets/ANUGERAH/pf-kemasan.webp", w:640, h:480},
+  {cat:"Offset Printing", title:"Dus Kardus Custom", desc:"Dus dan box custom sesuai ukuran produk", img:"../assets/ANUGERAH/pf-dus.webp", w:600, h:444},
+  {cat:"Indoor/Outdoor", title:"Spanduk E-Commerce", desc:"Spanduk promo e-commerce bahan 340gr dan 440gr", img:"../assets/ANUGERAH/pf-spanduk-ecommerce.webp", w:900, h:864},
+  {cat:"Indoor/Outdoor", title:"X Banner Promosi", desc:"X banner ringan untuk promosi dan event", img:"../assets/ANUGERAH/pf-x-banner.webp", w:1000, h:790},
+  {cat:"Indoor/Outdoor", title:"Roll Up Banner Indoor", desc:"Roll up banner untuk booth dan pameran indoor", img:"../assets/ANUGERAH/pf-roll-up-2.webp", w:626, h:626},
+  {cat:"Indoor/Outdoor", title:"Tripod Banner", desc:"Tripod banner promosi untuk retail dan event", img:"../assets/ANUGERAH/pf-tripod.webp", w:1000, h:568},
+  {cat:"Indoor/Outdoor", title:"Tripod Banner F&B", desc:"Tripod banner khusus promo kuliner dan F&B", img:"../assets/ANUGERAH/pf-tripod-food.webp", w:736, h:736},
+  {cat:"Indoor/Outdoor", title:"Stiker One Way Vision", desc:"Stiker satu arah untuk kaca kendaraan dan etalase", img:"../assets/ANUGERAH/pf-stiker-oneway.webp", w:1000, h:1000},
+  {cat:"Indoor/Outdoor", title:"Cetak Kanvas", desc:"Cetak foto dan seni di media kanvas", img:"../assets/ANUGERAH/pf-kanvas.webp", w:1000, h:640},
+  {cat:"Indoor/Outdoor", title:"Car Branding", desc:"Branding dan wrap untuk kendaraan promosi", img:"../assets/ANUGERAH/pf-car-branding.webp", w:1000, h:764},
+  {cat:"Indoor/Outdoor", title:"Flagchain Custom", desc:"Rangkaian bendera promosi untuk event dan storefront", img:"../assets/ANUGERAH/pf-flagchain.webp", w:1000, h:498},
+  {cat:"UV Printing", title:"Stiker UV DTF", desc:"Stiker UV DTF untuk branding produk dan kemasan", img:"../assets/ANUGERAH/pf-stiker-uv-dtf.webp", w:1000, h:714},
+  {cat:"UV Printing", title:"Kartu E-Money", desc:"Cetak kartu e-money dan kartu plastik custom", img:"../assets/ANUGERAH/pf-emoney.webp", w:1000, h:714},
+  {cat:"Merchandise", title:"Totebag DTF", desc:"Totebag cetak DTF untuk event dan goodie bag", img:"../assets/ANUGERAH/pf-totebag.webp", w:450, h:450},
+  {cat:"Merchandise", title:"Tas Custom", desc:"Tas belanja dan tas brand custom", img:"../assets/ANUGERAH/pf-tas.webp", w:1000, h:980},
+  {cat:"Merchandise", title:"Payung Custom", desc:"Payung promosi dengan logo brand", img:"../assets/ANUGERAH/pf-payung.webp", w:1000, h:698},
+  {cat:"Merchandise", title:"Pulpen Custom", desc:"Pulpen logo untuk merchandise dan souvenir", img:"../assets/ANUGERAH/pf-pulpen.webp", w:1000, h:698},
+  {cat:"Merchandise", title:"Jam Custom", desc:"Jam dinding dan jam meja custom logo", img:"../assets/ANUGERAH/pf-jam.webp", w:413, h:295},
+  {cat:"Merchandise", title:"USB Custom", desc:"USB flashdisk custom untuk souvenir perusahaan", img:"../assets/ANUGERAH/pf-usb.webp", w:413, h:295},
+  {cat:"Merchandise", title:"Kipas Promosi", desc:"Kipas custom untuk promosi dan event", img:"../assets/ANUGERAH/pf-kipas.webp", w:1000, h:698},
+  {cat:"Merchandise", title:"Dompet Custom", desc:"Dompet kartu custom dengan logo", img:"../assets/ANUGERAH/pf-dompet.webp", w:1000, h:698},
+  {cat:"Merchandise", title:"Gantungan Kunci", desc:"Gantungan kunci custom untuk souvenir", img:"../assets/ANUGERAH/pf-gantungan.webp", w:630, h:394},
+  {cat:"Merchandise", title:"Topi Custom", desc:"Topi bordir dan sablon untuk tim dan event", img:"../assets/ANUGERAH/pf-topi.webp", w:413, h:295},
 ];
 const grid = document.getElementById('grid');
-function render(filter="Semua"){
-  grid.innerHTML = items.filter(i=> filter==="Semua" || i.cat===filter).map(i=>`
-    <button data-cat="${i.cat}" class="text-left bg-white rounded-3xl overflow-hidden border border-[#1E2412]/10 hover:-translate-y-1 transition-transform">
-      <div class="h-44 overflow-hidden"><img src="${i.img}" alt="${i.title}" loading="lazy" class="w-full h-full object-cover"></div>
-      <div class="p-4"><span class="text-[11px] font-bold tracking-[.12em] text-[#62684A]">${i.cat}</span><h3 class="font-bold text-sm text-[#1E2412]">${i.title}</h3><p class="text-xs text-[#62684A] mt-1">${i.desc}</p></div>
-    </button>`).join('');
-  grid.querySelectorAll('button').forEach((b,idx)=>{
-    b.addEventListener('click',()=> openLB(items.filter(i=> filter==="Semua" || i.cat===filter)[idx]));
+const GAP = 16;
+let currentList = items;
+const meas = document.createElement('div');
+meas.style.cssText = 'position:absolute;left:-9999px;top:0;visibility:hidden;';
+document.body.appendChild(meas);
+
+function colCount() {
+  if (matchMedia('(min-width:1024px)').matches) return 3;
+  if (matchMedia('(min-width:640px)').matches) return 2;
+  return 1;
+}
+
+function makeCards(list) {
+  return list.map(it => {
+    const d = document.createElement('div');
+    d.innerHTML = `<button data-cat="${it.cat}" class="text-left w-full bg-white rounded-3xl overflow-hidden border border-[#1E2412]/10 hover:-translate-y-1 transition-transform">
+      <img src="${it.img}" alt="${it.title}" loading="lazy" style="aspect-ratio:${it.w}/${it.h}" class="w-full h-auto">
+      <div class="p-4"><span class="text-[11px] font-bold tracking-[.12em] text-[#62684A]">${it.cat}</span><h3 class="font-bold text-sm text-[#1E2412]">${it.title}</h3><p class="text-xs text-[#62684A] mt-1">${it.desc}</p></div>
+    </button>`;
+    const btn = d.firstElementChild;
+    btn.addEventListener('click', () => openLB(it));
+    return btn;
   });
 }
-function openLB(it){ document.getElementById('lb-img').src=it.img; document.getElementById('lb-cat').textContent=it.cat; document.getElementById('lb-title').textContent=it.title; document.getElementById('lb-desc').textContent=it.desc; document.getElementById('lightbox').classList.remove('hidden'); document.getElementById('lightbox').classList.add('flex'); document.body.style.overflow='hidden'; }
-function closeLB(){ document.getElementById('lightbox').classList.add('hidden'); document.getElementById('lightbox').classList.remove('flex'); document.body.style.overflow=''; }
+
+function colHeight(c) {
+  return c.nodes.length ? c.nodes.reduce((s, x) => s + x._h + GAP, 0) - GAP : 0;
+}
+
+function layout(list) {
+  currentList = list;
+  const n = colCount();
+  const W = grid.clientWidth;
+  const colW = n > 1 ? (W - GAP * (n - 1)) / n : W;
+  meas.style.width = colW + 'px';
+  const nodes = makeCards(list);
+  nodes.forEach(nd => { meas.appendChild(nd); nd._h = nd.getBoundingClientRect().height; });
+  meas.innerHTML = '';
+  const cols = Array.from({ length: n }, () => ({ h: 0, nodes: [] }));
+  nodes.forEach(nd => {
+    let k = 0;
+    for (let j = 1; j < n; j++) if (cols[j].h < cols[k].h) k = j;
+    cols[k].nodes.push(nd);
+    cols[k].h += nd._h + GAP;
+  });
+  cols.forEach(c => c.h = colHeight(c));
+  if (n >= 2) {
+    const a = 0, b = n - 1, m = 1;
+    let guard = 0;
+    while (guard++ < 200) {
+      const diff = cols[a].h - cols[b].h;
+      if (Math.abs(diff) <= 24) break;
+      let best = null;
+      const take = (d2, op) => { if (!best || d2 < best.d) best = Object.assign({ d: d2 }, op); };
+      const trySwaps = (X, Y) => {
+        for (let ix = 0; ix < cols[X].nodes.length; ix++) for (let iy = 0; iy < cols[Y].nodes.length; iy++) {
+          const hx = cols[X].nodes[ix]._h, hy = cols[Y].nodes[iy]._h;
+          let hA2 = cols[a].h, hB2 = cols[b].h;
+          if (X === a) hA2 += hy - hx;
+          if (X === b) hB2 += hy - hx;
+          if (Y === a) hA2 += hx - hy;
+          if (Y === b) hB2 += hx - hy;
+          take(Math.abs(hA2 - hB2), { type: 'swap', X, Y, ix, iy });
+        }
+      };
+      trySwaps(a, b);
+      const moveD = (F, T, idx) => {
+        if ((F === a || F === b) && cols[F].nodes.length < 2) return null;
+        const card = cols[F].nodes[idx];
+        if (!card) return null;
+        const h = card._h + GAP;
+        let hA2 = cols[a].h, hB2 = cols[b].h;
+        if (F === a) hA2 -= h;
+        if (F === b) hB2 -= h;
+        if (T === a) hA2 += h;
+        if (T === b) hB2 += h;
+        return Math.abs(hA2 - hB2);
+      };
+      const tryMoves = (F, T) => {
+        for (let i = 0; i < cols[F].nodes.length; i++) {
+          const d2 = moveD(F, T, i);
+          if (d2 !== null) take(d2, { type: 'move', from: F, to: T, idx: i });
+        }
+      };
+      if (diff > 0) {
+        tryMoves(a, b);
+        if (n >= 3) { tryMoves(a, m); tryMoves(m, b); trySwaps(a, m); trySwaps(b, m); }
+      } else {
+        tryMoves(b, a);
+        if (n >= 3) { tryMoves(b, m); tryMoves(m, a); trySwaps(a, m); trySwaps(b, m); }
+      }
+      if (!best || best.d >= Math.abs(diff) - 1) break;
+      if (best.type === 'swap') {
+        const t = cols[best.X].nodes[best.ix];
+        cols[best.X].nodes[best.ix] = cols[best.Y].nodes[best.iy];
+        cols[best.Y].nodes[best.iy] = t;
+      } else {
+        cols[best.to].nodes.push(cols[best.from].nodes.splice(best.idx, 1)[0]);
+      }
+      for (let k = 0; k < n; k++) cols[k].h = colHeight(cols[k]);
+    }
+  }
+  grid.innerHTML = '';
+  for (let k = 0; k < n; k++) {
+    const col = document.createElement('div');
+    col.className = 'flex-1 flex flex-col gap-4 min-w-0';
+    cols[k].nodes.forEach(nd => col.appendChild(nd));
+    grid.appendChild(col);
+  }
+}
+
+function openLB(it) { document.getElementById('lb-img').src = it.img; document.getElementById('lb-cat').textContent = it.cat; document.getElementById('lb-title').textContent = it.title; document.getElementById('lb-desc').textContent = it.desc; document.getElementById('lightbox').classList.remove('hidden'); document.getElementById('lightbox').classList.add('flex'); document.body.style.overflow = 'hidden'; }
+function closeLB() { document.getElementById('lightbox').classList.add('hidden'); document.getElementById('lightbox').classList.remove('flex'); document.body.style.overflow = ''; }
 document.getElementById('lb-close').addEventListener('click', closeLB);
-document.getElementById('lightbox').addEventListener('click', e=>{ if(e.target.id==='lightbox') closeLB(); });
-document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeLB(); });
-document.querySelectorAll('.filter-btn').forEach(b=>{
-  b.addEventListener('click', ()=>{
-    document.querySelectorAll('.filter-btn').forEach(x=>{ x.className='filter-btn bg-white border border-[#1E2412]/10 rounded-full px-4 py-2 text-sm font-bold'; });
-    b.className='filter-btn active bg-[#1E2412] text-white rounded-full px-4 py-2 text-sm font-bold';
-    render(b.dataset.filter);
+document.getElementById('lightbox').addEventListener('click', e => { if (e.target.id === 'lightbox') closeLB(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLB(); });
+document.querySelectorAll('.filter-btn').forEach(b => {
+  b.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(x => { x.className = 'filter-btn bg-white border border-[#1E2412]/10 rounded-full px-4 py-2 text-sm font-bold'; });
+    b.className = 'filter-btn active bg-[#1E2412] text-white rounded-full px-4 py-2 text-sm font-bold';
+    layout(items.filter(i => b.dataset.filter === 'Semua' || i.cat === b.dataset.filter));
   });
 });
-render();
+let rT;
+window.addEventListener('resize', () => { clearTimeout(rT); rT = setTimeout(() => layout(currentList), 150); });
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => layout(currentList));
+layout(items);
 </script>
 </body>
 </html>

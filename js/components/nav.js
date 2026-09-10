@@ -3,7 +3,7 @@ window.App = window.App || {};
 window.App.components = window.App.components || {};
 
 App.components.nav = function () {
-    const isSub = location.pathname.split('/').length > 2;
+    const isSub = /\/(layanan|portofolio|tentang-kami|kontak)(\/|$)/.test(location.pathname);
     const home = isSub ? '../index.html' : '';
     const root = isSub ? '../' : '';
     return `
