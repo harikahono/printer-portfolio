@@ -1,5 +1,5 @@
 /* ===== ANUGRAH PRINTER — shared design system ===== */
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Inter:opsz,wght@14..32,100..900&display=swap");
+/* font dimuat via <link> + preconnect di tiap <head> (lebih cepat dari @import) */
 
 :root{
   /* fixed palette: primary #D4DC24, ink #1E2412, graphite #343B1E, body #62684A, paper #EFECD8 */
@@ -54,6 +54,20 @@ html::-webkit-scrollbar-thumb:hover{background:#1E2412;}
 .scroll-btn:hover{background:#D4DC24;color:#1E2412;}
 .scroll-btn.left{left:-8px;}
 .scroll-btn.right{right:-8px;}
+
+/* ---------- Logo marquee (seamless, pause on hover/focus) ---------- */
+.logo-marquee{overflow:hidden;-webkit-mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent);}
+.logo-track{display:flex;width:max-content;animation:logo-scroll 35s linear infinite;}
+.logo-track > a{margin-right:1rem;}
+.logo-card{flex-shrink:0;width:10rem;height:5rem;border-radius:1rem;border:1px solid rgba(30,36,18,.1);background:#fff;display:flex;align-items:center;justify-content:center;padding:.75rem;transition:border-color .15s;}
+.logo-card:hover{border-color:rgba(30,36,18,.25);}
+.logo-card img{max-height:3rem;max-width:100%;width:auto;object-fit:contain;}
+.logo-marquee:hover .logo-track,.logo-marquee:focus-within .logo-track{animation-play-state:paused;}
+@keyframes logo-scroll{to{transform:translateX(-50%);}}
+@media (prefers-reduced-motion:reduce){
+  .logo-track{animation:none;}
+  .logo-marquee{overflow-x:auto;-webkit-mask-image:none;mask-image:none;}
+}
 
 @media (max-width:640px){
   nav button[aria-controls="mobile-menu"]{width:44px !important;height:44px !important;display:flex;align-items:center;justify-content:center;}

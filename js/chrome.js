@@ -26,7 +26,7 @@
     /* Reveal on scroll — halus di semua page (no lib) */
     (function reveal(){
         // auto-tag static subpages (main > section/header) biar nggak perlu edit 1-1 — home sudah punya data-reveal explicit
-        document.querySelectorAll('main > section, main > header, #app > section, #app > header').forEach(el=>{
+        document.querySelectorAll('main > section, main > header, #app > section').forEach(el=>{
             if(!el.hasAttribute('data-reveal')) el.setAttribute('data-reveal','');
         });
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {

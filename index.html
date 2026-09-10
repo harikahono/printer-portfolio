@@ -32,7 +32,10 @@
   ]}
 }
 </script>
-<link rel="stylesheet" href="css/site.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:opsz,wght@14..32,100..900&display=swap">
+<link rel="stylesheet" href="css/site.css?v=3">
 <style>
 body{overflow-x:hidden;}
 
@@ -40,12 +43,6 @@ body{overflow-x:hidden;}
 /* .scroll-row / .scroll-btn / .hide-scrollbar sekarang global di css/site.css */
 #row-best > :first-child{margin-left:auto;}
 #row-best > :last-child{margin-right:auto;}
-
-/* ---------- Marquee ---------- */
-.marquee{--gap:2.5rem;display:flex;overflow:hidden;gap:var(--gap);}
-.marquee-set{flex-shrink:0;display:flex;justify-content:space-around;min-width:100%;gap:var(--gap);animation:marquee 22s linear infinite;}
-.marquee-set:hover{animation-play-state:paused;}
-@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(calc(-100% - var(--gap)))}}
 </style>
 <style type="text/tailwindcss">
 @layer base {
@@ -66,7 +63,7 @@ body{overflow-x:hidden;}
 <script src="js/components/hero.js"></script>
 <script src="js/components/produk.js"></script>
 <script src="js/components/bento.js"></script>
-<script src="js/components/trust.js"></script>
+<script src="js/components/trust.js?v=2"></script>
 <script src="js/components/newsletter.js"></script>
 <script src="js/components/footer.js"></script>
 <script src="js/chrome.js"></script>
