@@ -7,7 +7,6 @@ App.components.hero = function () {
 <!-- ===== HERO ===== -->
 <header class="max-w-7xl 2xl:max-w-[1440px] w-full mx-auto bg-[#D4DC24] text-[#1E2412] p-8 sm:p-14 rounded-tl-4xl rounded-b-4xl relative z-0 overflow-hidden">
     <span aria-hidden="true" class="font-anton absolute top-6 left-0 text-[9rem] lg:text-[13rem] leading-none text-[#1E2412]/[0.07] select-none pointer-events-none whitespace-nowrap z-0">ANUGRAH PRINTER</span>
-    <!-- <img src="assets/ANUGERAH/hero-mesin-cetak.webp" alt="Mesin cetak offset di workshop Anugerah Printer" class="hidden lg:block absolute top-3 right-10 w-[56%] aspect-[10/7] object-cover"> -->
     <div class="grid lg:grid-cols-[1.05fr_.95fr] gap-10 items-center relative z-10">
         <div class="flex flex-col">
             <h1 class="font-anton text-4xl/10 sm:text-5xl/14 lg:text-6xl/16 text-[#1E2412]">CETAK OFFSET, DIGITAL, DAN MERCHANDISE DI PONDOK LABU.</h1>

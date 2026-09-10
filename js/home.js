@@ -1,11 +1,5 @@
 /* ===== HOME: PERAKIT HALAMAN ===== */
 
-/* Geser scroll-row */
-window.scrollRow = function (id, dir) {
-    const row = document.getElementById(id);
-    row.scrollBy({ left: dir * 260, behavior: 'smooth' });
-};
-
 (function boot() {
     const app = document.getElementById('app');
     app.innerHTML = [

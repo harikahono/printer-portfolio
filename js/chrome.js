@@ -48,17 +48,4 @@
         });
     })();
 
-    /* Scroll-row arrows (data-scroll-prev / data-scroll-next) — target snap-aligned biar nggak lawan scroll-snap */
-    window.scrollRow = function (id, dir) {
-        const row = document.getElementById(id);
-        if (!row) return;
-        const step = (row.firstElementChild ? row.firstElementChild.offsetWidth : 240) + 20;
-        const max = row.scrollWidth - row.clientWidth;
-        const target = Math.max(0, Math.min(max, Math.round((row.scrollLeft + dir * step) / step) * step));
-        row.scrollTo({ left: target, behavior: 'smooth' });
-    };
-    document.querySelectorAll('[data-scroll-prev]').forEach(b =>
-        b.addEventListener('click', () => scrollRow(b.dataset.target, -1)));
-    document.querySelectorAll('[data-scroll-next]').forEach(b =>
-        b.addEventListener('click', () => scrollRow(b.dataset.target, 1)));
 })();

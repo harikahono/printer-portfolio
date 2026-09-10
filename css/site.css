@@ -39,21 +39,9 @@ html::-webkit-scrollbar-thumb:hover{background:#1E2412;}
   [data-reveal][data-reveal-delay="3"]{transition-delay:.24s;}
 }
 
-/* ---------- Scroll rows (kartu geser horizontal) ---------- */
-.scroll-row{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;scrollbar-width:none;}
-.scroll-row::-webkit-scrollbar,.hide-scrollbar::-webkit-scrollbar{display:none;}
+/* ---------- Util: sembunyikan scrollbar (dipakai nav layanan) ---------- */
 .hide-scrollbar{scrollbar-width:none;}
-
-/* ---------- Tombol panah scroll-row ---------- */
-.scroll-btn{
-  position:absolute;top:38%;width:42px;height:42px;border-radius:50%;background:#fff;
-  box-shadow:0 10px 30px -12px rgba(19,35,74,.18);
-  display:flex;align-items:center;justify-content:center;color:#1E2412;z-index:10;
-  transition:background .15s;cursor:pointer;border:none;font-size:1.4rem;line-height:1;
-}
-.scroll-btn:hover{background:#D4DC24;color:#1E2412;}
-.scroll-btn.left{left:-8px;}
-.scroll-btn.right{right:-8px;}
+.hide-scrollbar::-webkit-scrollbar{display:none;}
 
 /* ---------- Logo marquee (seamless, pause on hover/focus) ---------- */
 .logo-marquee{overflow:hidden;-webkit-mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent);}
