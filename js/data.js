@@ -4,8 +4,8 @@ window.App = window.App || {};
 window.App.data = {
     /* Footer kolom link */
     footer: {
-        "Kategori": ["Digital Printing", "Sticker & Label", "Large Format", "Merchandise"],
-        "Tentang Kami": ["Profil Perusahaan", "Karir", "Blog", "Hubungi Kami"],
-        "Bantuan": ["Cara Pesan", "Lacak Pesanan", "Metode Pembayaran", "FAQ"],
+        "Layanan": ["Cetak Offset", "Digital Printing", "Indoor / Outdoor", "Merchandise & DTF", "UV Printing"],
+        "Perusahaan": ["Tentang Kami", "Portofolio", "Layanan", "Kontak"],
+        "Kontak": ["WhatsApp", "Instagram", "Google Maps", "Jam Buka"],
     },
 };

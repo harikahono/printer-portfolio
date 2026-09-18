@@ -6,24 +6,25 @@ App.components.footer = function () {
     const isSub = /\/(layanan|portofolio|tentang-kami|kontak)(\/|$)/.test(location.pathname);
     const root = isSub ? '../' : '';
     const href = {
+        "Cetak Offset": `${root}layanan/#offset`,
         "Digital Printing": `${root}layanan/#indoor-outdoor`,
-        "Sticker & Label": `${root}layanan/#indoor-outdoor`,
-        "Large Format": `${root}layanan/#indoor-outdoor`,
-        "Merchandise": `${root}layanan/#merchandise`,
-        "Profil Perusahaan": `${root}tentang-kami/`,
-        "Karir": `${root}kontak/`,
-        "Blog": `${root}tentang-kami/`,
-        "Hubungi Kami": `${root}kontak/`,
-        "Cara Pesan": `${root}#alur-pemesanan`,
-        "Lacak Pesanan": `https://wa.me/6285885928506?text=Halo%20Anugerah%20Printer,%20saya%20ingin%20cek%20status%20pesanan`,
-        "Metode Pembayaran": `${root}kontak/`,
-        "FAQ": `${root}kontak/`,
+        "Indoor / Outdoor": `${root}layanan/#indoor-outdoor`,
+        "Merchandise & DTF": `${root}layanan/#merchandise`,
+        "UV Printing": `${root}layanan/#uv-printing`,
+        "Tentang Kami": `${root}tentang-kami/`,
+        "Portofolio": `${root}portofolio/`,
+        "Layanan": `${root}layanan/`,
+        "Kontak": `${root}kontak/`,
+        "WhatsApp": `https://wa.me/6285885928506?text=Halo%20Anugerah%20Printer%2C%20saya%20ingin%20konsultasi%20tentang%20produk%20cetak`,
+        "Instagram": `https://instagram.com/anugerahdigitalprinter`,
+        "Google Maps": `https://www.google.com/maps/search/Jl.+H.+Ipin+No.+5+Pondok+Labu`,
+        "Jam Buka": `${root}kontak/`,
     };
     const cols = Object.entries(App.data.footer).map(([title, links]) => `
         <div>
             <h5 class="text-sm/4 font-bold mb-4">${title}</h5>
             <ul class="space-y-2.5 text-xs/4 text-white/60">
-                ${links.map(l => `<li><a href="${href[l]}" class="inline-flex min-h-11 items-center hover:text-[#D4DC24] transition-colors">${l}</a></li>`).join('')}
+                ${links.map(l => `<li><a href="${href[l]}" ${href[l].startsWith('http') ? 'target="_blank" rel="noopener"' : ''} class="inline-flex min-h-11 items-center hover:text-[#D4DC24] transition-colors">${l === 'Jam Buka' ? 'Senin–Sabtu, 09.00–21.00' : l}</a></li>`).join('')}
             </ul>
         </div>`).join('');
 
@@ -44,7 +45,7 @@ App.components.footer = function () {
             <a href="https://www.google.com/maps/search/Jl.+H.+Ipin+No.+5+Pondok+Labu" target="_blank" rel="noopener" aria-label="Google Maps" class="size-11 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#D4DC24] hover:text-[#1E2412] transition-colors"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></a>
         </div>
         <p class="text-xs/4 text-white/50 text-center sm:text-left">© 2026 Anugerah Printer · Jl. H. Ipin No. 5, Pondok Labu, Jakarta Selatan</p>
-        <p class="text-xs/4 text-white/50">Privacy Policy · Terms · ID / EN</p>
+        <a href="${root}kontak/" class="text-xs/4 text-white/50 hover:text-[#D4DC24] transition-colors">Kontak & Lokasi</a>
     </div>
 </footer>
 `;
