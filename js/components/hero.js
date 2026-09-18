@@ -49,8 +49,25 @@ App.components.hero = function () {
                     <span class="inline-flex items-center gap-1.5"><span class="size-2 rounded-full bg-[#D4DC24]"></span>Live Preview</span>
                 </div>
                 <div class="aspect-video w-full overflow-hidden rounded-[1.45rem] bg-[#343B1E]">
-                    <video class="h-full w-[114%] max-w-none -translate-x-[6%] object-cover" src="assets/anugerah-video.webm" poster="assets/hero.webp" autoplay muted loop playsinline preload="metadata" loading="lazy" aria-label="Video contoh proses produksi Anugerah Printer"></video>
+                    <video id="hero-video" class="h-full w-[114%] max-w-none -translate-x-[6%] object-cover" src="assets/anugerah-video.webm" poster="assets/hero.webp" muted loop playsinline preload="metadata" loading="lazy" aria-label="Video contoh proses produksi Anugerah Printer"></video>
                 </div>
+
+                <script>
+                (function autoplayVideo() {
+                    const video = document.getElementById('hero-video');
+                    if (!video) return;
+                    
+                    const tryPlay = () => {
+                        video.play().catch(error => {
+                            // Autoplay diblokir - tunggu interaksi pengguna
+                            document.body.onclick = () => video.play();
+                        });
+                    };
+                    
+                    // Coba autoplay segera
+                    setTimeout(tryPlay, 100);
+                })();
+                </script>
             </div>
             <p class="mt-3 text-xs/5 text-[#1E2412]/60 max-w-sm lg:ml-auto">Preview workshop, proses cetak, finishing, dan quality check sebelum pesanan dikirim.</p>
         </div>
