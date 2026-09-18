@@ -41,6 +41,19 @@ App.components.hero = function () {
                 </div>
             </div>
         </div>
+        <div class="relative w-full max-w-full justify-self-center lg:justify-self-end">
+            <div class="absolute -inset-3 rounded-[2rem] bg-[#1E2412]/10 rotate-2"></div>
+            <div class="relative rounded-[2rem] bg-[#1E2412] p-2.5 shadow-2xl shadow-[#1E2412]/20 overflow-hidden">
+                <div class="flex items-center justify-between gap-3 px-3 pb-2 text-white/70 text-[11px] font-bold tracking-[.14em] uppercase">
+                    <span>Proses Produksi</span>
+                    <span class="inline-flex items-center gap-1.5"><span class="size-2 rounded-full bg-[#D4DC24]"></span>Live Preview</span>
+                </div>
+                <div class="aspect-video w-full overflow-hidden rounded-[1.45rem] bg-[#343B1E]">
+                    <video class="h-full w-[114%] max-w-none -translate-x-[6%] object-cover" src="assets/anugerah-video.mp4" poster="assets/hero.webp" autoplay muted loop playsinline></video>
+                </div>
+            </div>
+            <p class="mt-3 text-xs/5 text-[#1E2412]/60 max-w-sm lg:ml-auto">Preview workshop, proses cetak, finishing, dan quality check sebelum pesanan dikirim.</p>
+        </div>
     </div>
 </header>
 `;
